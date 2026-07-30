@@ -1,155 +1,477 @@
 <!DOCTYPE html>
-<html>
-  <head>
-    <meta charset="utf-8" />
-    <title>aini</title>
-    <style type="text/css">
-      html{
-          width: 100%;
-          height: 100%;
-        }
-        .bigbox{
-          width: 10px;
-          height: 10px;
-          margin: 200px 400px;
-          position: relative;
-        }
-        .box{
-          width:500px;
-          height:300px;
-          margin: 0 auto;
-          transform-style: preserve-3d;
-          transform: rotateX(-30deg) rotateY(-80deg);
-          -webkit-animation: mystyle 15s infinite;
-          animation-timing-function: linear;
-        }
-        @-webkit-keyframes mystyle{
-          from{transform: rotateX(-180deg) rotateY(-180deg);}
-          to{transform: rotateX(180deg) rotateY(180deg);}
-        }
-        .box div{
-          position: absolute;
-          width: 200px;
-          height: 200px;
-          opacity: 0.8;
-          transition: all .4s;
-        }
-        .bigpic{
-          width: 200px;
-          height: 200px;
-        }
-        .box .bigfront{
-          transform: rotateY(0deg) translateZ(100px);
-        }
-        .box .bigback{
-          transform: translateZ(-100px) rotateY(180deg);
-        }
-        .box .bigleft{
-          transform: rotateY(90deg) translateZ(100px);
-        }
-        .box .bigright{
-          transform: rotateY(-90deg) translateZ(100px);
-        }
-        .box .bigtop{
-          transform: rotateX(90deg) translateZ(100px);
-        }
-        .box .bigbottom{
-          transform: rotateX(-90deg) translateZ(100px);
-        }
-        .box span{
-          display: block;
-          position: absolute;
-          width: 140px;
-          height: 140px;
-          top: 25px;
-          left: 25px;
-        }
-        .box .smallpic{
-          width: 140px;
-          height: 140px;
-        }
-        .box .smallleft{
-          transform: rotateY(90deg) translateZ(70px);
-        }
-        .box .smallright{
-          transform: rotateY(-90deg) translateZ(70px);
-        }
-        .box .smalltop{
-          transform: rotateX(90deg) translateZ(70px);
-        }
-        .box .smallbottom{
-          transform: rotateX(-90deg) translateZ(70px);
-        }
-        .box .smallfront{
-          transform: rotateY(0deg) translateZ(70px);
-        }
-        .box .smallback{
-          transform: translateZ(-70px) rotateY(180deg);
-        }
-        /*:hover 我们之前说过的一个css选择器，能够让鼠标指向的时候触发*/
-        .box:hover .bigleft{
-          transform: rotateY(90deg) translateZ(300px);
-        }
-        .box:hover .bigright{
-          transform: rotateY(-90deg) translateZ(300px);
-        }
-        .box:hover .bigtop{
-          transform: rotateX(90deg) translateZ(300px);
-        }
-        .box:hover .bigbottom{
-          transform: rotateX(-90deg) translateZ(300px);
-        }
-        .box:hover .bigfront{
-          transform: rotateY(0deg) translateZ(300px);
-        }
-        .box:hover .bigback{
-          transform: translateZ(-300px) rotateY(180deg);
-        }
-    body {
-	background-color: #09C;
-}
-    </style>
-  </head>
-  <body>
-    <div class="bigbox">
-      <div class="box">
-        <div class="bigfront">
-          <img src="../photo/0B6E5D590B0E5FF060E793C20749F2FF.jpg" class="bigpic" >
-        </div>
-        <div class="bigback">
-          <img src="../photo/4F23565898791BC934950D7B755051AE.jpg" class="bigpic">
-        </div>
-        <div class="bigleft">
-          <img src="../photo/18F647EE0F48CA8E69DAE8B0531A9F81.jpg" class="bigpic">
-        </div>
-        <div class="bigright">
-          <img src="../photo/7067F7BFC9B02BA9FB8761C173793180.jpg" class="bigpic">
-        </div>
-        <div class="bigtop">
-          <img src="../photo/81156FB91D8F32AC876BC77448C8972E.jpg" class="bigpic">
-        </div>
-        <div class="bigbottom">
-          <img src="../photo/A5FAA8CF4A021A17E31CF66CE161CDBF.jpg" class="bigpic">
-        </div>
-        <span class="smallfront">
-          <img src="../photo/E88B16CDED9B11453764B0D4E82505DB.jpg" class="smallpic" />
-        </span>
-        <span class="smallback">
-          <img src="../photo/4F23565898791BC934950D7B755051AE.jpg" class="smallpic" />
-        </span>
-        <span class="smallleft">
-          <img src="../photo/E88B16CDED9B11453764B0D4E82505DB.jpg" class="smallpic" />
-        </span>
-        <span class="smallright">
-          <img src="../photo/A5FAA8CF4A021A17E31CF66CE161CDBF.jpg" class="smallpic" />
-        </span>
-        <span class="smalltop">
-          <img src="../photo/AD47C4056E5311AB333E235681D8EE8C.jpg" class="smallpic" />
-        </span>
-        <span class="smallbottom">
-          <img src="../photo/18F647EE0F48CA8E69DAE8B0531A9F81.jpg" class="smallpic" />
-        </span>
+<html lang="zh-CN">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Surprise</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="style.css" />
+  <style>
+    /* 与全站同一套浅色底，只加强本页相册表现 */
+    .sp {
+      width: min(100% - 2rem, 960px);
+      margin: 0 auto;
+      padding-bottom: 2.5rem;
+    }
+
+    .sp-cinema {
+      position: relative;
+      width: 100%;
+      height: min(64vh, 560px);
+      min-height: 360px;
+      border-radius: 16px;
+      overflow: hidden;
+      background: #f0eeea;
+      box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+    }
+
+    .sp-slides {
+      position: absolute;
+      inset: 0;
+    }
+
+    .sp-slide {
+      position: absolute;
+      inset: 0;
+      opacity: 0;
+      visibility: hidden;
+      transition: opacity 0.75s ease, visibility 0.75s;
+      z-index: 0;
+    }
+
+    .sp-slide.is-active {
+      opacity: 1;
+      visibility: visible;
+      z-index: 1;
+    }
+
+    .sp-slide img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+      object-position: center;
+      display: block;
+      transform: scale(1.06);
+      transition: transform 5.5s linear;
+    }
+
+    .sp-slide.is-active img {
+      transform: scale(1);
+    }
+
+    /* 轻底部渐变，只为托住字，不整页变黑 */
+    .sp-cinema::after {
+      content: "";
+      position: absolute;
+      left: 0;
+      right: 0;
+      bottom: 0;
+      height: 42%;
+      z-index: 2;
+      pointer-events: none;
+      background: linear-gradient(
+        180deg,
+        transparent 0%,
+        rgba(20, 18, 16, 0.08) 40%,
+        rgba(20, 18, 16, 0.45) 100%
+      );
+    }
+
+    .sp-progress {
+      position: absolute;
+      top: 14px;
+      left: 16px;
+      right: 16px;
+      z-index: 5;
+      display: flex;
+      gap: 6px;
+    }
+
+    .sp-progress i {
+      flex: 1;
+      height: 3px;
+      border-radius: 99px;
+      background: rgba(255, 255, 255, 0.45);
+      overflow: hidden;
+      box-shadow: 0 1px 2px rgba(0, 0, 0, 0.08);
+    }
+
+    .sp-progress i em {
+      display: block;
+      height: 100%;
+      width: 0%;
+      background: #fff;
+      border-radius: inherit;
+    }
+
+    .sp-progress i.is-done em {
+      width: 100%;
+    }
+
+    .sp-progress i.is-active em {
+      animation: spFill var(--dur, 4s) linear forwards;
+    }
+
+    @keyframes spFill {
+      from { width: 0%; }
+      to { width: 100%; }
+    }
+
+    .sp-meta {
+      position: absolute;
+      left: 20px;
+      bottom: 18px;
+      z-index: 4;
+      text-align: left;
+      pointer-events: none;
+      color: #fff;
+      text-shadow: 0 2px 12px rgba(0, 0, 0, 0.25);
+    }
+
+    .sp-meta .num {
+      font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif;
+      font-size: clamp(2rem, 5vw, 3rem);
+      line-height: 1;
+      letter-spacing: 0.06em;
+    }
+
+    .sp-meta .tag {
+      margin-top: 0.25rem;
+      font-size: 0.78rem;
+      letter-spacing: 0.14em;
+      opacity: 0.9;
+    }
+
+    .sp-meta .tag span {
+      color: #ffc9d4;
+    }
+
+    .sp-ctrl {
+      position: absolute;
+      top: 50%;
+      z-index: 5;
+      transform: translateY(-50%);
+      width: 44px;
+      height: 44px;
+      border: none;
+      border-radius: 50%;
+      background: rgba(255, 255, 255, 0.92);
+      color: #333;
+      font-size: 1.4rem;
+      line-height: 1;
+      cursor: pointer;
+      box-shadow: 0 6px 18px rgba(0, 0, 0, 0.12);
+      transition: transform 0.2s, background 0.2s;
+    }
+
+    .sp-ctrl:hover {
+      background: #fff;
+      transform: translateY(-50%) scale(1.06);
+    }
+
+    .sp-ctrl.prev { left: 12px; }
+    .sp-ctrl.next { right: 12px; }
+
+    .sp-strip {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      align-items: flex-end;
+      gap: 14px 16px;
+      margin-top: 1.5rem;
+      padding: 8px 4px 4px;
+    }
+
+    /* 拍立得选图 */
+    .sp-thumb {
+      width: 96px;
+      padding: 7px 7px 22px;
+      border: none;
+      border-radius: 2px;
+      overflow: visible;
+      cursor: pointer;
+      background: #fff;
+      opacity: 0.88;
+      transform: rotate(var(--r, 0deg)) translateY(0);
+      transition: transform 0.35s cubic-bezier(0.34, 1.25, 0.64, 1), box-shadow 0.3s, opacity 0.25s;
+      box-shadow: 0 6px 16px rgba(0, 0, 0, 0.08);
+    }
+
+    .sp-thumb:nth-child(1) { --r: -5deg; }
+    .sp-thumb:nth-child(2) { --r: 3deg; }
+    .sp-thumb:nth-child(3) { --r: -2deg; }
+    .sp-thumb:nth-child(4) { --r: 4deg; }
+    .sp-thumb:nth-child(5) { --r: -4deg; }
+    .sp-thumb:nth-child(6) { --r: 2deg; }
+
+    .sp-thumb img {
+      width: 100%;
+      aspect-ratio: 1;
+      height: auto;
+      object-fit: cover;
+      display: block;
+      border-radius: 1px;
+      background: #eee;
+    }
+
+    .sp-thumb span {
+      display: block;
+      margin-top: 7px;
+      font-size: 0.68rem;
+      letter-spacing: 0.08em;
+      color: #9a9590;
+      text-align: center;
+      font-family: "ZCOOL XiaoWei", "Noto Serif SC", serif;
+    }
+
+    .sp-thumb:hover {
+      opacity: 1;
+      transform: rotate(0deg) translateY(-8px) scale(1.05);
+      box-shadow: 0 12px 24px rgba(0, 0, 0, 0.12);
+      z-index: 2;
+    }
+
+    .sp-thumb.is-active {
+      opacity: 1;
+      transform: rotate(0deg) translateY(-10px) scale(1.08);
+      box-shadow:
+        0 0 0 2px #e57373,
+        0 14px 28px rgba(229, 115, 115, 0.22);
+      z-index: 3;
+    }
+
+    .sp-hint {
+      text-align: center;
+      margin-top: 1rem;
+      font-size: 0.82rem;
+      color: var(--muted, #9a9590);
+    }
+
+    @media (max-width: 560px) {
+      .sp-cinema {
+        height: min(56vh, 480px);
+        min-height: 300px;
+        border-radius: 12px;
+      }
+
+      .sp-thumb {
+        width: calc(33.33% - 12px);
+        max-width: 88px;
+        min-width: 72px;
+        padding-bottom: 18px;
+      }
+
+      .sp-ctrl {
+        width: 38px;
+        height: 38px;
+        font-size: 1.2rem;
+      }
+    }
+
+    @media (prefers-reduced-motion: reduce) {
+      .sp-slide img {
+        transition: none !important;
+        transform: none !important;
+      }
+      .sp-progress i.is-active em {
+        animation: none;
+        width: 100%;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="page">
+    <nav class="site-nav">
+      <div class="container">
+        <a class="nav-brand" href="../index.html"><span>SRKL</span></a>
+        <ul class="nav-links">
+          <li><a href="../index.html">首页</a></li>
+          <li><a href="tdx.html">生日快乐</a></li>
+          <li><a href="wysn.html">网瘾少女</a></li>
+          <li><a href="nuli.html">加油晓晓</a></li>
+          <li><a href="surprise.html" class="active">Surprise</a></li>
+        </ul>
       </div>
+    </nav>
+
+    <div class="sp">
+      <header class="page-header">
+        <h1>Surprise</h1>
+        <p>大图轮播 · 点下面也能跳</p>
+      </header>
+
+      <div class="sp-cinema" id="spCinema">
+        <div class="sp-progress" id="spProgress" aria-hidden="true"></div>
+        <div class="sp-slides" id="spSlides"></div>
+
+        <div class="sp-meta">
+          <div class="num" id="spNum">01</div>
+          <div class="tag">Memory <span id="spTag">/ 01</span></div>
+        </div>
+
+        <button type="button" class="sp-ctrl prev" id="spPrev" aria-label="上一张">‹</button>
+        <button type="button" class="sp-ctrl next" id="spNext" aria-label="下一张">›</button>
+      </div>
+
+      <div class="sp-strip" id="spStrip"></div>
+      <p class="sp-hint">会自动播 · 左右键 / 滑动也能切</p>
     </div>
-  </body>
+
+    <footer class="site-footer">Surprise</footer>
+  </div>
+
+  <script>
+    (function () {
+      var photos = [
+        "../photo/0B6E5D590B0E5FF060E793C20749F2FF.jpg",
+        "../photo/4F23565898791BC934950D7B755051AE.jpg",
+        "../photo/7067F7BFC9B02BA9FB8761C173793180.jpg",
+        "../photo/18F647EE0F48CA8E69DAE8B0531A9F81.jpg",
+        "../photo/81156FB91D8F32AC876BC77448C8972E.jpg",
+        "../photo/A5FAA8CF4A021A17E31CF66CE161CDBF.jpg"
+      ];
+
+      var DUR = 4000;
+      var slidesEl = document.getElementById("spSlides");
+      var progressEl = document.getElementById("spProgress");
+      var stripEl = document.getElementById("spStrip");
+      var numEl = document.getElementById("spNum");
+      var tagEl = document.getElementById("spTag");
+      var cinema = document.getElementById("spCinema");
+      if (!slidesEl || !progressEl || !stripEl) return;
+
+      var slides = [];
+      var thumbs = [];
+      var bars = [];
+      var index = 0;
+      var timer = null;
+      var paused = false;
+
+      photos.forEach(function (src, i) {
+        var slide = document.createElement("div");
+        slide.className = "sp-slide" + (i === 0 ? " is-active" : "");
+        slide.innerHTML = '<img src="' + src + '" alt="照片 ' + (i + 1) + '" />';
+        slidesEl.appendChild(slide);
+        slides.push(slide);
+
+        var bar = document.createElement("i");
+        bar.innerHTML = "<em></em>";
+        progressEl.appendChild(bar);
+        bars.push(bar);
+
+        var thumb = document.createElement("button");
+        thumb.type = "button";
+        thumb.className = "sp-thumb" + (i === 0 ? " is-active" : "");
+        var label = i + 1 < 10 ? "0" + (i + 1) : String(i + 1);
+        thumb.innerHTML =
+          '<img src="' + src + '" alt="" /><span>' + label + "</span>";
+        thumb.addEventListener("click", function () { go(i); });
+        stripEl.appendChild(thumb);
+        thumbs.push(thumb);
+      });
+
+      function pad(n) {
+        return n < 10 ? "0" + n : String(n);
+      }
+
+      function restartKenBurns(slide) {
+        var img = slide.querySelector("img");
+        if (!img) return;
+        img.style.transition = "none";
+        img.style.transform = "scale(1.08)";
+        void img.offsetWidth;
+        img.style.transition = "transform " + (DUR / 1000 + 0.8) + "s linear";
+        img.style.transform = "scale(1)";
+      }
+
+      function paintBars() {
+        bars.forEach(function (bar, i) {
+          bar.classList.remove("is-active", "is-done");
+          var em = bar.querySelector("em");
+          em.style.animation = "none";
+          void em.offsetWidth;
+          if (i < index) {
+            bar.classList.add("is-done");
+            em.style.width = "100%";
+          } else if (i === index) {
+            bar.classList.add("is-active");
+            em.style.width = "0%";
+            bar.style.setProperty("--dur", DUR + "ms");
+            em.style.animation = "spFill " + DUR + "ms linear forwards";
+          } else {
+            em.style.width = "0%";
+          }
+        });
+      }
+
+      function go(i) {
+        index = (i + photos.length) % photos.length;
+        slides.forEach(function (s, n) {
+          s.classList.toggle("is-active", n === index);
+        });
+        thumbs.forEach(function (t, n) {
+          t.classList.toggle("is-active", n === index);
+        });
+        numEl.textContent = pad(index + 1);
+        tagEl.textContent = "/ " + pad(index + 1);
+        restartKenBurns(slides[index]);
+        paintBars();
+        armTimer();
+      }
+
+      function armTimer() {
+        clearTimeout(timer);
+        if (paused) return;
+        timer = setTimeout(function () {
+          go(index + 1);
+        }, DUR);
+      }
+
+      document.getElementById("spPrev").addEventListener("click", function () {
+        go(index - 1);
+      });
+      document.getElementById("spNext").addEventListener("click", function () {
+        go(index + 1);
+      });
+
+      cinema.addEventListener("mouseenter", function () {
+        paused = true;
+        clearTimeout(timer);
+        var em = bars[index] && bars[index].querySelector("em");
+        if (em) em.style.animationPlayState = "paused";
+      });
+      cinema.addEventListener("mouseleave", function () {
+        paused = false;
+        armTimer();
+        paintBars();
+      });
+
+      window.addEventListener("keydown", function (e) {
+        if (e.key === "ArrowLeft") go(index - 1);
+        if (e.key === "ArrowRight") go(index + 1);
+      });
+
+      var tx = null;
+      cinema.addEventListener("touchstart", function (e) {
+        tx = e.changedTouches[0].clientX;
+      }, { passive: true });
+      cinema.addEventListener("touchend", function (e) {
+        if (tx == null) return;
+        var dx = e.changedTouches[0].clientX - tx;
+        if (Math.abs(dx) > 45) {
+          if (dx < 0) go(index + 1);
+          else go(index - 1);
+        }
+        tx = null;
+      }, { passive: true });
+
+      restartKenBurns(slides[0]);
+      paintBars();
+      armTimer();
+    })();
+  </script>
+</body>
 </html>
