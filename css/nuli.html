@@ -1,58 +1,66 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>雪日努力 · 晓晓</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>雪日努力晓晓 · 冬日寄语</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="../js/app.js" defer></script>
 </head>
 <body>
   <div class="nuli-bg" aria-hidden="true"></div>
+  <div class="nuli-veil" aria-hidden="true"></div>
+  <canvas id="snowCanvas" class="snow-canvas" aria-hidden="true"></canvas>
 
-  <div class="page">
-    <nav class="site-nav">
-      <div class="container">
-        <a class="nav-brand" href="../index.html"><span>SRKL</span></a>
+  <div class="site-wrap" style="position:relative;z-index:10">
+    <nav class="nav">
+      <div class="wrap nav-in">
+        <a class="nav-brand" href="../index.html">晓晓的生日</a>
         <ul class="nav-links">
           <li><a href="../index.html">首页</a></li>
-          <li><a href="tdx.html">生日快乐</a></li>
-          <li><a href="wysn.html">网瘾少女</a></li>
-          <li><a href="nuli.html" class="active">加油晓晓</a></li>
-          <li><a href="surprise.html">Surprise</a></li>
+          <li><a href="tdx.html" >可爱的晓同学</a></li>
+          <li><a href="wysn.html" >网瘾少女田桑</a></li>
+          <li><a href="nuli.html" class="on">雪日努力晓晓</a></li>
+          <li><a href="surprise.html" >Surprise</a></li>
         </ul>
       </div>
     </nav>
-
-    <main class="container" style="padding-bottom: 2.5rem;">
-      <header class="page-header fade-in">
+    <main class="wrap">
+      <div class="page-hero">
+        <span class="pill">❄️ 冬日寄语</span>
         <h1>雪日努力晓晓</h1>
-        <p>冷归冷，人不能咸鱼</p>
-      </header>
+        <p>无论世界有多冷，心中的暖意一直都在 ✿</p>
+      </div>
 
-      <div class="note-stack fade-in delay-1">
-        <article class="note-card">
-          <span class="tag">晓同学加油包</span>
-          <p class="excerpt">
-            下雪天最适合干两件事：一是窝着打游戏，二是假装自己很努力。不过晓晓你不太一样——你会一边吐槽好冷，一边还是把该做的事做完。这种又娇气又狠的劲儿，说真的，挺可爱的。
-          </p>
-          <p class="source">—— 路过的夸夸机器</p>
-        </article>
+      <article class="letter">
+        <div class="quote-block">
+          在众多荆棘和蔷薇的环绕下，矗立着一座古老的城堡，古堡似乎年代已经很久远了，高高的灰色城墙上爬满了暗绿色的蔓藤，如此之多，都快把窗子全包围了，有的甚至钻进了窗子里，透出几分阴森。
+          <cite>—— 网络文摘</cite>
+        </div>
+        <div class="core">
+          弱小的藤蔓可以包围围墙，<br/>
+          可爱的晓晓只要努力也一定可以<mark>冲出南召的束缚</mark>，<br/>
+          加油哦，晓晓最棒！
+        </div>
+        <div class="sign">
+          <span>✦ 2020 冬日 · 永远 ✦</span>
+          <span>—— 永远为你加油的人 · qws ✍️</span>
+        </div>
+      </article>
 
-        <aside class="note-card emphasis">
-          <p>
-            所以啊：<br />
-            想躺就躺一会儿，想冲就冲一把，<br />
-            但记得——干饭、睡觉、开心，一个都不能少。<br />
-            晓晓最棒，说的就是你！加油鸭～
-          </p>
-        </aside>
+      <div class="center mb3" style="max-width:500px;margin-inline:auto">
+        <div class="card" data-zoom="../photo/1604749734701.jpg" data-cap="雪日枝头 ✦">
+          <div class="card-img" style="aspect-ratio:16/10">
+            <img src="../photo/1604749734701.jpg" alt="雪景"/>
+          </div>
+          <div class="card-body"><p class="card-caption">雪日枝头 · 点击放大 ✦</p></div>
+        </div>
       </div>
     </main>
-
-    <footer class="site-footer">咸鱼禁止，干饭鼓励</footer>
+    <footer class="footer">Today · 雪日努力晓晓 · <a href="../index.html">返回首页</a></footer>
   </div>
 </body>
 </html>

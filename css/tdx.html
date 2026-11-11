@@ -1,88 +1,122 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>可爱的晓同学</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>可爱的晓同学 · 生日快乐</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="../js/app.js" defer></script>
 </head>
 <body>
-  <div class="page">
-    <nav class="site-nav">
-      <div class="container">
-        <a class="nav-brand" href="../index.html"><span>SRKL</span></a>
+  <div class="site-wrap">
+    <nav class="nav">
+      <div class="wrap nav-in">
+        <a class="nav-brand" href="../index.html">晓晓的生日</a>
         <ul class="nav-links">
           <li><a href="../index.html">首页</a></li>
-          <li><a href="tdx.html" class="active">生日快乐</a></li>
-          <li><a href="wysn.html">网瘾少女</a></li>
-          <li><a href="nuli.html">加油晓晓</a></li>
-          <li><a href="surprise.html">Surprise</a></li>
+          <li><a href="tdx.html" class="on">可爱的晓同学</a></li>
+          <li><a href="wysn.html" >网瘾少女田桑</a></li>
+          <li><a href="nuli.html" >雪日努力晓晓</a></li>
+          <li><a href="surprise.html" >Surprise</a></li>
         </ul>
       </div>
     </nav>
 
-    <main class="container" style="padding-bottom: 2.5rem;">
-      <header class="page-header fade-in">
+    <main class="wrap">
+      <div class="page-hero">
+        <span class="pill">🎂 生日快乐</span>
         <h1>可爱的晓同学</h1>
-        <p class="life-stats" id="lifeStats">2002.11.17</p>
-      </header>
+        <p>今天一定要是元气满满的一天哦，摇身一变就成了成年人哦！</p>
+      </div>
 
-      <section class="pics-2 fade-in delay-1">
-        <div class="photo-swap">
-          <img class="swap-main" src="../photo/E88B16CDED9B11453764B0D4E82505DB.jpg" alt="照片一" />
-          <img class="swap-alt" src="../photo/18F647EE0F48CA8E69DAE8B0531A9F81.jpg" alt="切换" />
-        </div>
-        <div class="photo-swap">
-          <img class="swap-main" src="../photo/4F23565898791BC934950D7B755051AE.jpg" alt="照片二" />
-          <img class="swap-alt" src="../photo/7067F7BFC9B02BA9FB8761C173793180.jpg" alt="切换" />
-        </div>
-      </section>
-      <p class="hint-line fade-in delay-2">鼠标放上去，图会偷偷换哦</p>
+      <!-- 时光里程碑 -->
+      <div class="milestone mb3">
+        <div class="label">2002.11.17 → <span id="dateEl"></span></div>
+        <div class="count">来到这个世界的第 <span id="dayCount">...</span> 天 · <span id="ageEl">...</span> 岁啦</div>
+        <div class="wish">愿你眼里总有星光，岁岁常欢愉，万事皆胜意 ✦</div>
+      </div>
 
-      <section class="pics-3 fade-in delay-3">
-        <img class="photo" src="../photo/7067F7BFC9B02BA9FB8761C173793180.jpg" alt="照片三" />
-        <video
-          src="../photo/E8BDA801E70B17EB87E80A8A73B85851.mp4"
-          controls
-          playsinline
-          preload="metadata"
-          poster="../photo/0B6E5D590B0E5FF060E793C20749F2FF.jpg"
-        ></video>
-        <img class="photo" src="../photo/0B6E5D590B0E5FF060E793C20749F2FF.jpg" alt="照片四" />
-      </section>
+      <!-- 会变身的相片 -->
+      <div class="sec-title center">会变身的奇妙相片</div>
+      <div class="sec-sub center">鼠标移上去（或手机点击），相片会悄悄变身成另一张 ✦</div>
+      <div class="diptych-grid mb3">
+        <div class="diptych">
+          <div class="diptych-viewport">
+            <img class="main" src="../photo/E88B16CDED9B11453764B0D4E82505DB.jpg" alt="照片一"
+              data-zoom="../photo/E88B16CDED9B11453764B0D4E82505DB.jpg" data-cap="晓同学的微笑 ✦"/>
+            <img class="alt" src="../photo/18F647EE0F48CA8E69DAE8B0531A9F81.jpg" alt="变身"
+              data-zoom="../photo/18F647EE0F48CA8E69DAE8B0531A9F81.jpg" data-cap="比耶！✦"/>
+          </div>
+          <div class="diptych-foot">
+            <span class="name">定格瞬间 ①</span>
+            <span class="hint">悬停 / 点击变身 ✦</span>
+          </div>
+        </div>
+        <div class="diptych">
+          <div class="diptych-viewport">
+            <img class="main" src="../photo/4F23565898791BC934950D7B755051AE.jpg" alt="照片二"
+              data-zoom="../photo/4F23565898791BC934950D7B755051AE.jpg" data-cap="镜子里的晓晓 ✦"/>
+            <img class="alt" src="../photo/7067F7BFC9B02BA9FB8761C173793180.jpg" alt="变身"
+              data-zoom="../photo/7067F7BFC9B02BA9FB8761C173793180.jpg" data-cap="可爱晓晓 ✦"/>
+          </div>
+          <div class="diptych-foot">
+            <span class="name">定格瞬间 ②</span>
+            <span class="hint">悬停 / 点击变身 ✦</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- 珍贵回忆 · 视频 + 两侧照片 -->
+      <div class="sec-title center">珍贵回忆小影院</div>
+      <div class="sec-sub center">留住那些会动的时光 ✦</div>
+      <div class="triptych">
+        <div class="photo-frame" data-zoom="../photo/7067F7BFC9B02BA9FB8761C173793180.jpg" data-cap="可爱晓晓 ✿">
+          <div class="pf-img" style="aspect-ratio:3/4">
+            <img src="../photo/7067F7BFC9B02BA9FB8761C173793180.jpg" alt="照片"/>
+          </div>
+          <div class="pf-cap">可爱晓晓 ✿</div>
+        </div>
+        <div class="video-frame">
+          <video src="../photo/E8BDA801E70B17EB87E80A8A73B85851.mp4"
+            controls playsinline preload="metadata"
+            poster="../photo/0B6E5D590B0E5FF060E793C20749F2FF.jpg"></video>
+        </div>
+        <div class="photo-frame" data-zoom="../photo/0B6E5D590B0E5FF060E793C20749F2FF.jpg" data-cap="开心每一刻 ✿">
+          <div class="pf-img" style="aspect-ratio:3/4">
+            <img src="../photo/0B6E5D590B0E5FF060E793C20749F2FF.jpg" alt="照片"/>
+          </div>
+          <div class="pf-cap">开心每一刻 ✿</div>
+        </div>
+      </div>
+
+      <!-- 更多相片 — 用 A5FAA8 换掉 16.jpg -->
+      <div class="sec-title center mb2">更多时光相片</div>
+      <div class="gallery-3">
+        <div class="card" data-zoom="../photo/A5FAA8CF4A021A17E31CF66CE161CDBF.jpg" data-cap="冬日双麻花辫 ✦">
+          <div class="card-img" style="aspect-ratio:4/3">
+            <img src="../photo/A5FAA8CF4A021A17E31CF66CE161CDBF.jpg" alt="冬日照片"/>
+          </div>
+          <div class="card-body"><p class="card-caption">冬日双麻花辫 ✦</p></div>
+        </div>
+        <div class="card" data-zoom="../photo/AD47C4056E5311AB333E235681D8EE8C.jpg" data-cap="温暖旧时光 ✦">
+          <div class="card-img" style="aspect-ratio:4/3">
+            <img src="../photo/AD47C4056E5311AB333E235681D8EE8C.jpg" alt="照片"/>
+          </div>
+          <div class="card-body"><p class="card-caption">温暖旧时光 ✦</p></div>
+        </div>
+        <div class="card" data-zoom="../photo/18F647EE0F48CA8E69DAE8B0531A9F81.jpg" data-cap="比耶！✦">
+          <div class="card-img" style="aspect-ratio:4/3">
+            <img src="../photo/18F647EE0F48CA8E69DAE8B0531A9F81.jpg" alt="照片"/>
+          </div>
+          <div class="card-body"><p class="card-caption">比耶！✦</p></div>
+        </div>
+      </div>
     </main>
 
-    <footer class="site-footer" id="lifeFooter">2002.11.17</footer>
+    <footer class="footer">Today · 可爱的晓同学 · <a href="../index.html">返回首页</a></footer>
   </div>
-
-  <script>
-    (function () {
-      // 生日 2002-11-17，页面按 2026-11-21 这一天计算
-      var birth = new Date(2002, 10, 17);
-      var asOf = new Date(2026, 10, 21);
-
-      var start = Date.UTC(birth.getFullYear(), birth.getMonth(), birth.getDate());
-      var end = Date.UTC(asOf.getFullYear(), asOf.getMonth(), asOf.getDate());
-      var days = Math.round((end - start) / 86400000);
-
-      var age = asOf.getFullYear() - birth.getFullYear();
-      var md = asOf.getMonth() - birth.getMonth();
-      if (md < 0 || (md === 0 && asOf.getDate() < birth.getDate())) {
-        age--;
-      }
-
-      var daysText = days.toLocaleString("zh-CN");
-      var line = "已走过 " + daysText + " 天 · " + age + " 岁";
-      var dateLine = "2026.11.21";
-
-      var stats = document.getElementById("lifeStats");
-      var foot = document.getElementById("lifeFooter");
-      if (stats) stats.textContent = dateLine + "  ·  " + line;
-      if (foot) foot.textContent = "2002.11.17  →  2026.11.21  ·  " + line;
-    })();
-  </script>
 </body>
 </html>

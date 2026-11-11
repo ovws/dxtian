@@ -1,69 +1,80 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>网瘾少女 · 田桑</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>网瘾少女田桑 · 战绩高光</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="style.css"/>
+  <script src="../js/app.js" defer></script>
 </head>
 <body>
-  <div class="page">
-    <nav class="site-nav">
-      <div class="container">
-        <a class="nav-brand" href="../index.html"><span>SRKL</span></a>
+  <div class="site-wrap">
+    <nav class="nav">
+      <div class="wrap nav-in">
+        <a class="nav-brand" href="../index.html">晓晓的生日</a>
         <ul class="nav-links">
           <li><a href="../index.html">首页</a></li>
-          <li><a href="tdx.html">生日快乐</a></li>
-          <li><a href="wysn.html" class="active">网瘾少女</a></li>
-          <li><a href="nuli.html">加油晓晓</a></li>
-          <li><a href="surprise.html">Surprise</a></li>
+          <li><a href="tdx.html" >可爱的晓同学</a></li>
+          <li><a href="wysn.html" class="on">网瘾少女田桑</a></li>
+          <li><a href="nuli.html" >雪日努力晓晓</a></li>
+          <li><a href="surprise.html" >Surprise</a></li>
         </ul>
       </div>
     </nav>
-
-    <main class="container" style="padding-bottom: 2.5rem;">
-      <header class="page-header fade-in">
+    <main class="wrap">
+      <div class="page-hero">
+        <span class="pill">🎮 战绩档案室</span>
         <h1>网瘾少女田桑</h1>
-        <p>战绩高光 · 友谊的嘴炮</p>
-      </header>
+        <p>记录那些欢声笑语的开黑时光</p>
+      </div>
 
-      <!-- 文字区：头像 + 引言（上下居中，不和图并排） -->
-      <section class="game-intro fade-in delay-1">
-        <div class="avatar">
-          <img src="../photo/81156FB91D8F32AC876BC77448C8972E.jpg" alt="田桑" />
+      <!-- 选手档案 -->
+      <div class="gamer-card">
+        <div class="gamer-avatar" data-zoom="../photo/81156FB91D8F32AC876BC77448C8972E.jpg" data-cap="田桑本桑 ✿">
+          <img src="../photo/81156FB91D8F32AC876BC77448C8972E.jpg" alt="田桑"/>
         </div>
-        <div class="quote">
-          <p>
-            时而大杀四方，时而唯唯诺诺——
-            <span class="highlight">说白了，还是你菜。</span>
-            但菜得很有节目效果。
-          </p>
+        <div class="gamer-info">
+          <h2>田桑</h2>
+          <p class="quote">"时而大杀四方，时而唯唯诺诺，究其源，<strong>还是你菜。</strong>"</p>
+          <p class="meta">段位：嘴硬王者 · 顺风神操作，逆风大转移</p>
         </div>
-      </section>
+      </div>
 
-      <!-- 纯图片区（4 张） -->
-      <section class="shots fade-in delay-2">
-        <figure>
-          <img src="../photo/Screenshot_2020-11-25-20-55-57-976_com.tencent.tm.jpg" alt="截图 1" loading="lazy" />
-        </figure>
-        <figure>
-          <img src="../photo/Screenshot_2020-11-25-20-56-17-498_com.tencent.tm.jpg" alt="截图 2" loading="lazy" />
-        </figure>
-        <figure>
-          <img src="../photo/Screenshot_2020-11-25-20-56-24-712_com.tencent.tm.jpg" alt="截图 3" loading="lazy" />
-        </figure>
-        <figure>
-          <img src="../photo/Screenshot_2020-11-25-20-56-58-482_com.tencent.tm.jpg" alt="截图 4" loading="lazy" />
-        </figure>
-      </section>
+      <!-- 战报网格 -->
+      <div class="sec-title center">真实对局档案</div>
+      <div class="sec-sub center">点击可查看 2400×1080 完整战报 ✦</div>
+      <div class="gallery-2">
+        <div class="card" data-zoom="../photo/Screenshot_2020-11-25-20-55-57-976_com.tencent.tm.jpg" data-cap="战报 ① · 大杀四方">
+          <div class="card-img" style="aspect-ratio:2400/1080"><img src="../photo/Screenshot_2020-11-25-20-55-57-976_com.tencent.tm.jpg" alt="战报" loading="lazy"/></div>
+          <div class="card-body"><p class="card-caption">战报 ① · 大杀四方时刻</p></div>
+        </div>
+        <div class="card" data-zoom="../photo/Screenshot_2020-11-25-20-56-17-498_com.tencent.tm.jpg" data-cap="战报 ② · 谁说不 Carry？">
+          <div class="card-img" style="aspect-ratio:2400/1080"><img src="../photo/Screenshot_2020-11-25-20-56-17-498_com.tencent.tm.jpg" alt="战报" loading="lazy"/></div>
+          <div class="card-body"><p class="card-caption">战报 ② · 谁说不 Carry？</p></div>
+        </div>
+        <div class="card" data-zoom="../photo/Screenshot_2020-11-25-20-56-24-712_com.tencent.tm.jpg" data-cap="战报 ③ · 智商检测">
+          <div class="card-img" style="aspect-ratio:2400/1080"><img src="../photo/Screenshot_2020-11-25-20-56-24-712_com.tencent.tm.jpg" alt="战报" loading="lazy"/></div>
+          <div class="card-body"><p class="card-caption">战报 ③ · 智商检测波次</p></div>
+        </div>
+        <div class="card" data-zoom="../photo/Screenshot_2020-11-25-20-56-58-482_com.tencent.tm.jpg" data-cap="战报 ④ · 逆风大翻车">
+          <div class="card-img" style="aspect-ratio:2400/1080"><img src="../photo/Screenshot_2020-11-25-20-56-58-482_com.tencent.tm.jpg" alt="战报" loading="lazy"/></div>
+          <div class="card-body"><p class="card-caption">战报 ④ · 顺风神操，逆风翻车</p></div>
+        </div>
+      </div>
 
-      <p class="game-finale banter fade-in delay-3">富婆表示：能把你吊起来打（爱的那种）。</p>
+      <!-- 富婆压轴 -->
+      <div class="fupo">
+        <div class="screenshot-wrap" data-zoom="../photo/Screenshot_2020-11-25-20-50-58-017_com.tencent.tm.jpg" data-cap="富婆表示能把你吊起来打">
+          <img src="../photo/Screenshot_2020-11-25-20-50-58-017_com.tencent.tm.jpg" alt="压轴战报"/>
+        </div>
+        <h3>"富婆表示能把你吊起来打。"</h3>
+        <p>qws 的终极挑衅，哈哈哈 · 菜就多练，有你一起才最开心 ✿</p>
+      </div>
     </main>
-
-    <footer class="site-footer">网瘾少女</footer>
+    <footer class="footer">Today · 网瘾少女田桑 · <a href="../index.html">返回首页</a></footer>
   </div>
 </body>
 </html>

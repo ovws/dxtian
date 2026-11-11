@@ -1,73 +1,100 @@
 <!DOCTYPE html>
 <html lang="zh-CN">
 <head>
-  <meta charset="utf-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1" />
-  <title>Today · 生日快乐</title>
-  <meta name="description" content="Today 是重要的一天 —— 写给可爱的晓同学" />
-  <link rel="preconnect" href="https://fonts.googleapis.com" />
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
-  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&family=ZCOOL+XiaoWei&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="css/style.css" />
+  <meta charset="utf-8"/>
+  <meta name="viewport" content="width=device-width,initial-scale=1"/>
+  <title>Today · 是重要的一天</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com"/>
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin/>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+SC:wght@300;400;500&family=Noto+Serif+SC:wght@400;500&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="css/style.css"/>
+  <script src="js/app.js" defer></script>
   <script async defer data-website-id="64aaeea2-0abc-4821-a9e1-b5c1e2134538" src="https://umami-lyart-delta.vercel.app/umami.js"></script>
 </head>
 <body>
-  <div class="page">
-    <nav class="site-nav">
-      <div class="container">
-        <a class="nav-brand" href="index.html"><span>SRKL</span></a>
+  <div class="site-wrap">
+    <nav class="nav">
+      <div class="wrap nav-in">
+        <a class="nav-brand" href="index.html">晓晓的生日</a>
         <ul class="nav-links">
-          <li><a href="index.html" class="active">首页</a></li>
-          <li><a href="css/tdx.html">生日快乐</a></li>
-          <li><a href="css/wysn.html">网瘾少女</a></li>
-          <li><a href="css/nuli.html">加油晓晓</a></li>
+          <li><a href="index.html" class="on">首页</a></li>
+          <li><a href="css/tdx.html">可爱的晓同学</a></li>
+          <li><a href="css/wysn.html">网瘾少女田桑</a></li>
+          <li><a href="css/nuli.html">雪日努力晓晓</a></li>
           <li><a href="css/surprise.html">Surprise</a></li>
         </ul>
       </div>
     </nav>
 
-    <main class="hero">
-      <div class="hero-bday-row">
-        <span class="pill">🎂 生日快乐呀</span>
-        <span class="pill mint">2026.11.21 · 24 岁啦</span>
-      </div>
-      <h1 class="hero-title">To<em>day</em></h1>
-      <p class="hero-subtitle"><a href="#chapters">是重要的一天</a></p>
-      <p class="hero-msg">
-        又双叒叕长大一岁！元气要满满的，快乐要偷偷加量，晓同学冲鸭～
+    <main class="wrap">
+      <header class="home-intro">
+        <p class="home-kicker">写给晓同学</p>
+        <h1>生日快乐，晓晓。</h1>
+        <p>把照片、祝福和那些好玩的瞬间，留在这里。</p>
+      </header>
+      <section class="chapters">
+        <h2 class="chapters-title">一起翻翻这些回忆</h2>
+        <div class="chapters-grid">
+
+          <a class="ch-card" href="css/tdx.html">
+            <div class="ch-cover">
+              <span class="ch-num">01 · 生日快乐</span>
+              <img src="photo/E88B16CDED9B11453764B0D4E82505DB.jpg" alt="可爱的晓同学"/>
+            </div>
+            <div class="ch-body">
+              <h3 class="ch-title">可爱的晓同学</h3>
+              <p class="ch-desc">照片、视频，还有藏在相片里的小惊喜。</p>
+              <span class="ch-link">打开相册 →</span>
+            </div>
+          </a>
+
+          <a class="ch-card" href="css/wysn.html">
+            <div class="ch-cover">
+              <span class="ch-num">02 · 战绩高光</span>
+              <img src="photo/81156FB91D8F32AC876BC77448C8972E.jpg" alt="网瘾少女田桑"/>
+            </div>
+            <div class="ch-body">
+              <h3 class="ch-title">网瘾少女田桑</h3>
+              <p class="ch-desc">时而大杀四方，时而唯唯诺诺，究其源，还是你菜。王者真实战报与富婆喊话！</p>
+              <span class="ch-link">查看战报 →</span>
+            </div>
+          </a>
+
+          <a class="ch-card" href="css/nuli.html">
+            <div class="ch-cover">
+              <span class="ch-num">03 · 冬日寄语</span>
+              <img src="photo/A5FAA8CF4A021A17E31CF66CE161CDBF.jpg" alt="雪日努力晓晓"/>
+            </div>
+            <div class="ch-body">
+              <h3 class="ch-title">雪日努力晓晓</h3>
+              <p class="ch-desc">弱小的藤蔓可以包围围墙，可爱的晓晓只要努力也一定可以冲出南召的束缚，晓晓最棒！</p>
+              <span class="ch-link">阅读信笺 →</span>
+            </div>
+          </a>
+
+          <a class="ch-card" href="css/surprise.html">
+            <div class="ch-cover">
+              <span class="ch-num">04 · 时光彩蛋</span>
+              <img src="photo/0B6E5D590B0E5FF060E793C20749F2FF.jpg" alt="Surprise"/>
+            </div>
+            <div class="ch-body">
+              <h3 class="ch-title">Surprise · 时光魔方</h3>
+              <p class="ch-desc">转一转相册，看看每一面的照片。</p>
+              <span class="ch-link">打开相册 →</span>
+            </div>
+          </a>
+
+        </div>
+      </section>
+
+      <p class="center mb3" style="color:var(--ink3);font-size:.92rem">
+        偷偷说：有些照片移上去或点一下会变身哦 ✦
       </p>
-
-      <div class="feature-grid" id="chapters">
-        <a class="feature-card" href="css/tdx.html">
-          <span class="feature-num">01 · 生日</span>
-          <h3>可爱的晓同学</h3>
-          <p>照片、祝福，还有一点点小心思～</p>
-          <span class="arrow">戳这里 →</span>
-        </a>
-        <a class="feature-card" href="css/wysn.html">
-          <span class="feature-num">02 · 高光</span>
-          <h3>网瘾少女田桑</h3>
-          <p>大杀四方是你，掉分也是你，笑死。</p>
-          <span class="arrow">戳这里 →</span>
-        </a>
-        <a class="feature-card" href="css/nuli.html">
-          <span class="feature-num">03 · 打气</span>
-          <h3>雪日努力晓晓</h3>
-          <p>天气冷了也要努力发光（和干饭）！</p>
-          <span class="arrow">戳这里 →</span>
-        </a>
-        <a class="feature-card" href="css/surprise.html">
-          <span class="feature-num">04 · 彩蛋</span>
-          <h3>Surprise</h3>
-          <p>大图自动播，点一点也能跳～</p>
-          <span class="arrow">戳这里 →</span>
-        </a>
-      </div>
-
-      <p class="hint">偷偷说：有的照片鼠标放上去会变</p>
     </main>
 
-    <footer class="site-footer">Happy 24th · her.loser.dev</footer>
+    <footer class="footer">
+      Today · 写给可爱的晓同学 · <a href="https://her.loser.dev" target="_blank">her.loser.dev</a>
+    </footer>
   </div>
 </body>
 </html>
